@@ -1,18 +1,32 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+    <ion-navbar>
+        <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+
+        <h4 id="home-heading1" style="color:#000000;">{{title}}</h4>
+    </ion-navbar>
 </ion-header>
+<ion-content padding="true" class="has-header">
+    <div id="home-container1" class="contenedor-superior">
+        <div id="home-markdown1" class="show-list-numbers-and-dots">
+            <p style="color:#000000;">Chat with numbers that are not in your contact list</p>
+        </div>
+    </div>
+    <div class="spacer" style="width: 300px; height: 8px;"></div>
+    <form id="home-form1" class="list">
+        <ion-item>
+            <ion-label floating>Country code</ion-label>
+            <ion-input type="text" [(ngModel)]="phoneNumber.countrycode" name="countrycode" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Phone Number</ion-label>
+            <ion-input type="text" [(ngModel)]="phoneNumber.number" name="phonenumber" required></ion-input>
+        </ion-item>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    </form>
+    <div id="home-button-bar1" class="button-bar">
+        <button id="home-button4" class="button button-positive button-block icon-left ion-android-call" (click)="callNumber()">call</button>
+        <button id="home-button5" class="button button-balanced button-block icon-right ion-social-whatsapp" (click)=chatnumber()>chat</button>
+    </div>
 </ion-content>
