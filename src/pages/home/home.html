@@ -24,9 +24,15 @@
             <ion-input type="text" [(ngModel)]="phoneNumber.number" name="phonenumber" required></ion-input>
         </ion-item>
 
+        <button ion-button icon-start (click)="callNumber()">
+            <ion-icon name="star"></ion-icon>
+            Call
+          </button>
+
+        <button ion-button icon-end (click)="chatnumber()">
+            Chat
+            <ion-icon name="star"></ion-icon>
+          </button>
     </form>
-    <div id="home-button-bar1" class="button-bar">
-        <button id="home-button4" class="button button-positive button-block icon-left ion-android-call" (click)="callNumber()">call</button>
-        <button id="home-button5" class="button button-balanced button-block icon-right ion-social-whatsapp" (click)=chatnumber()>chat</button>
-    </div>
+
 </ion-content>
